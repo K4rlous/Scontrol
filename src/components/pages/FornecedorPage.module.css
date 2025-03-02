@@ -1,0 +1,27 @@
+.layout {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.layout h1 {
+    padding: 10px;
+}
+
+.btn {
+    background-color: #222;
+    color: white;
+    padding: 0.5em 1em;
+    margin: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+.btn:hover {
+    color: #bf6550
+}
+
+.layout li {
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import ProdutoPage from './components/pages/ProdutoPage';
+import FornecedorPage from './components/pages/FornecedorPage';
+import AssociacaoPage from './components/pages/AssociacaoPage';
+import Container from "./components/layout/Container";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Container customClass='min-height'>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/cadProduto" element={<ProdutoPage />} />
+            <Route exact path="/cadFornecedor" element={<FornecedorPage />} />
+            <Route path="/produtos/:produtoId" element={<ProdutoPage />} />
+            <Route exact path="/associacao" element={<AssociacaoPage />} />
+            <Route exact path="/associacao/:produtoId" element={<AssociacaoPage />} />
+            <Route exact path="/sobre" element={<About />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </div>
+    </Router>
   );
 }
-
-export default App;

@@ -1,0 +1,36 @@
+.layout {
+    padding: 20px;
+  }
+  
+  .produtoDetalhes {
+    margin-bottom: 20px;
+  }
+  
+  .produtoImagem {
+    max-width: 100px;
+    margin-top: 10px;
+  }
+  
+  .associacaoForm {
+    margin-bottom: 20px;
+  }
+  
+  .associacaoForm select {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .fornecedoresAssociados ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .fornecedoresAssociados li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .fornecedoresAssociados button {
+    margin-top: 10px;
+  }
